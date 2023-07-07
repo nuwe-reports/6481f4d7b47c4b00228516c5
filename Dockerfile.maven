@@ -16,7 +16,7 @@ RUN mvn package
 FROM openjdk:latest
 
 
-COPY --from=build /app/target/accenture-techhub-0.0.1-SNAPSHOT.war /app/accenture-techhub-0.0.1-SNAPSHOT.war
+COPY --from=build /app/target/accenture-techhub-0.0.1-SNAPSHOT.jar /app/accenture-techhub-0.0.1-SNAPSHOT.jar
 
 
-CMD ["java", "-jar", "/app/accenture-techhub-0.0.1-SNAPSHOT.war"]
+CMD ["java", "-jar", "/app/accenture-techhub-0.0.1-SNAPSHOT.jar"]
